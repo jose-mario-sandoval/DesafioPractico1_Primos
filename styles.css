@@ -1,0 +1,459 @@
+/* =========================================================
+   PRIMOS SPORT BAR & GRILL — Hoja de estilos (página Inicio)
+   Paleta y tipografía definidas aquí se reutilizarán en las
+   páginas de Menú, Eventos y Contactos para mantener una
+   identidad visual consistente en todo el sitio.
+   ========================================================= */
+
+/* ---------- Tokens de diseño ---------- */
+:root {
+  /* Color — tomado directamente del logo de Primos:
+     fondo negro, círculo crema, rótulo rojo vino, corona
+     de tapa de botella en cuero/marrón y chop de cerveza dorado */
+  --charcoal: #0d0b0a;          /* negro del fondo del logo */
+  --charcoal-soft: #1c1815;
+  --parchment: #f1ebdb;          /* crema del círculo interior */
+  --parchment-dim: #e2d9c1;
+  --flame: #ff0000;              /* rojo vino de "PRIMOS" */
+  --flame-dark: #701111;
+  --field: #57381d;              /* marrón cuero de la corona de tapa de botella */
+  --gold: #dba53a;                /* dorado del chop de cerveza */
+  --ink: #1c1815;
+  --paper: #f1ebdb;
+
+  /* Tipografía */
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-body: 'Libre Franklin', 'Segoe UI', sans-serif;
+
+  /* Espaciado */
+  --gap-section: clamp(3rem, 6vw, 6rem);
+  --gap-inner: clamp(1.25rem, 3vw, 2.5rem);
+  --max-width: 72rem;
+}
+
+/* ---------- Reinicio básico ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.logo-slot__img {
+  height: 7rem;
+  width: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.85em 1.8em;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: var(--flame);
+  color: var(--parchment);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background: var(--flame-dark);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--parchment);
+  color: var(--parchment);
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  background: var(--parchment);
+  color: var(--field);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================= */
+.site-header {
+  background: var(--charcoal);
+  color: var(--parchment);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logo-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-slot__placeholder {
+  width: 3rem;
+  height: 3rem;
+  border: 2px dashed var(--flame);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  color: var(--flame);
+  flex-shrink: 0;
+}
+
+.logo-slot__wordmark {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-slot__tag {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--parchment-dim);
+  margin-top: 0.2rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  border-bottom-color: var(--flame);
+}
+
+.main-nav a[aria-current="page"] {
+  border-bottom-color: var(--gold);
+  color: var(--gold);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  background: var(--charcoal);
+  color: var(--parchment);
+  padding: clamp(3.5rem, 10vw, 7rem) 1.5rem clamp(3rem, 8vw, 5.5rem);
+}
+
+.hero__inner {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--flame);
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.hero__line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  line-height: 1.08;
+  margin: 0 0 2rem;
+  text-wrap: balance;
+}
+
+/* =========================================================
+   HISTORIA — filas alternadas de texto e imagen
+   ========================================================= */
+.story {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-section) 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section);
+}
+
+.story__row {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-inner);
+}
+
+.story__row--reverse {
+  flex-direction: row-reverse;
+}
+
+.story__media,
+.story__text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.story__photo-slot {
+  aspect-ratio: 4 / 3;
+  border-radius: 0.5rem;
+  border: 2px dashed var(--field);
+  background: linear-gradient(135deg, var(--parchment-dim), var(--parchment));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.story__photo-slot span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--field);
+  letter-spacing: 0.02em;
+}
+
+.story__text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 34rem;
+  margin: 0;
+}
+
+/* =========================================================
+   CIERRE / CALL TO ACTION
+   ========================================================= */
+.cta {
+  background: var(--field);
+  color: var(--parchment);
+  padding: var(--gap-section) 1.5rem;
+}
+
+.cta__inner {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta__line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 2rem;
+  text-wrap: balance;
+}
+
+/* =========================================================
+   UBICACIÓN
+   ========================================================= */
+.location {
+  padding: var(--gap-section) 1.5rem;
+  background: var(--parchment);
+}
+
+.location__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: var(--gap-inner);
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.location__text,
+.location__map {
+  flex: 1 1 20rem;
+  min-width: 0;
+}
+
+.location__text h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 0.75rem;
+  color: var(--flame-dark);
+}
+
+.hours {
+  margin: 1.25rem 0 0;
+}
+
+.hours__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;   /* antes 0.4rem */
+  border-bottom: 1px solid var(--parchment-dim);
+  max-width: 22rem;
+}
+
+.hours__row dt {
+  font-weight: 700;
+  font-size: 1.15rem;   /* antes no tenía tamaño propio, heredaba el normal */
+}
+
+.hours__row dd {
+  margin: 0;
+  color: var(--charcoal-soft);
+  font-size: 1.15rem;   /* mismo tamaño para que quede parejo */
+}
+.location__map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 18rem;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+.site-footer {
+  background: var(--charcoal);
+  color: var(--parchment-dim);
+  padding: 2.5rem 1.5rem;
+}
+
+.site-footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.site-footer__brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--parchment);
+  margin: 0;
+}
+
+.site-footer__brand span {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  display: block;
+  color: var(--parchment-dim);
+}
+
+.site-footer nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-footer nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.site-footer nav a:hover,
+.site-footer nav a:focus-visible {
+  color: var(--flame);
+}
+
+.site-footer__copy {
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* =========================================================
+   RESPONSIVE — móviles y pantallas angostas
+   ========================================================= */
+@media (max-width: 700px) {
+  .story__row,
+  .story__row--reverse {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .story__text p {
+    max-width: none;
+  }
+
+  .site-header__inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+  }
+}
