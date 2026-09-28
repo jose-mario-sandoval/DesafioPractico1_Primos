@@ -1,25 +1,14 @@
-/* =========================================================
-   PRIMOS SPORT BAR & GRILL — Hoja de estilos (página Inicio)
-   Paleta y tipografía definidas aquí se reutilizarán en las
-   páginas de Menú, Eventos y Contactos para mantener una
-   identidad visual consistente en todo el sitio.
-   ========================================================= */
-
-/* ---------- Tokens de diseño ---------- */
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 :root {
-  /* Color — tomado directamente del logo de Primos:
-     fondo negro, círculo crema, rótulo rojo vino, corona
-     de tapa de botella en cuero/marrón y chop de cerveza dorado */
-  --charcoal: #0d0b0a;          /* negro del fondo del logo */
+  --charcoal: #0d0b0a;         
   --charcoal-soft: #1c1815;
-  --parchment: #f1ebdb;          /* crema del círculo interior */
+  --parchment: #f1ebdb;         
   --parchment-dim: #e2d9c1;
-  --flame: #ff0000;              /* rojo vino de "PRIMOS" */
+  --flame: #ff0000;              
   --flame-dark: #701111;
-  --field: #57381d;              /* marrón cuero de la corona de tapa de botella */
-  --gold: #dba53a;                /* dorado del chop de cerveza */
+  --field: #57381d;              
+  --gold: #dba53a;               
   --ink: #1c1815;
   --paper: #f1ebdb;
 
@@ -53,10 +42,6 @@ body {
 img {
   max-width: 100%;
   display: block;
-}
-.logo-slot__img {
-  height: 7rem;
-  width: auto;
 }
 
 a {
@@ -143,19 +128,9 @@ a {
   color: inherit;
 }
 
-.logo-slot__placeholder {
-  width: 3rem;
-  height: 3rem;
-  border: 2px dashed var(--flame);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-body);
-  font-size: 0.6rem;
-  letter-spacing: 0.05em;
-  color: var(--flame);
-  flex-shrink: 0;
+.logo-slot__img {
+  height: 5rem;
+  width: auto;
 }
 
 .logo-slot__wordmark {
@@ -207,32 +182,26 @@ a {
    HERO
    ========================================================= */
 .hero {
-  background: var(--charcoal);
-  color: var(--parchment);
-  padding: clamp(3.5rem, 10vw, 7rem) 1.5rem clamp(3rem, 8vw, 5.5rem);
+  position: relative;
+  background-color: #1a0f08;
+  background-image: url('../img/Logo_con_fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 36rem;                 
+  display: flex;
+  align-items: flex-end;         
+  justify-content: center;      
+  padding: 0 1.5rem 1rem;
 }
 
-.hero__inner {
-  max-width: 46rem;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.hero__eyebrow {
-  font-family: var(--font-body);
-  font-weight: 600;
-  color: var(--flame);
-  margin: 0 0 0.75rem;
-  font-size: 1rem;
-}
-
-.hero__line {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
-  line-height: 1.08;
-  margin: 0 0 2rem;
-  text-wrap: balance;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 /* =========================================================
@@ -352,20 +321,20 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.6rem 0;   /* antes 0.4rem */
+  padding: 0.6rem 0; 
   border-bottom: 1px solid var(--parchment-dim);
   max-width: 22rem;
 }
 
 .hours__row dt {
   font-weight: 700;
-  font-size: 1.15rem;   /* antes no tenía tamaño propio, heredaba el normal */
+  font-size: 1.15rem;   
 }
 
 .hours__row dd {
   margin: 0;
   color: var(--charcoal-soft);
-  font-size: 1.15rem;   /* mismo tamaño para que quede parejo */
+  font-size: 1.15rem;   
 }
 .location__map iframe {
   width: 100%;
@@ -457,5 +426,9 @@ a {
 
   .main-nav ul {
     justify-content: center;
+  }
+
+  .hero {
+    height: 24rem;
   }
 }
