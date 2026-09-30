@@ -11,7 +11,7 @@
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   margin: 0 0 0.75rem;
   color: var(--flame-dark);
-    text-align: center; 
+  text-align: center; 
 }
 
 .section-title--light {
