@@ -1,0 +1,126 @@
+/* =========================================================
+   PÁGINA DE CONTACTOS
+   Pegar ANTES del bloque "RESPONSIVE" de styles.css
+   (o al final, si prefieres; los @media de abajo ya van incluidos)
+   ========================================================= */
+
+/* ---------- Título de sección reutilizable (mismo estilo que los h2 de index) ---------- */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 0.75rem;
+  color: var(--flame-dark);
+    text-align: center; 
+}
+
+.section-title--light {
+  color: var(--parchment);
+}
+
+/* ---------- Síguenos y contáctanos ---------- */
+.contact {
+  padding: var(--gap-section) 1.5rem;
+  background: var(--parchment);
+}
+
+.contact__inner {
+  max-width: var(--max-width);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact__intro { 
+  margin: 0 auto var(--gap-inner);
+  font-size: 1.15rem;
+  max-width: 34rem; 
+}
+
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-inner);
+}
+
+.contact-card {
+  flex: 1 1 15rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 2rem 1.5rem;
+  background: var(--charcoal);
+  color: var(--parchment);
+  border-radius: 0.5rem;
+  border-bottom: 4px solid var(--flame);
+}
+
+.contact-card__icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card__icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.contact-card__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.contact-card__detail {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--parchment-dim);
+  overflow-wrap: anywhere;
+}
+
+.contact-card .btn {
+  margin-top: auto;
+}
+
+/* ---------- Deja tu reseña (Google) ---------- */
+.reviews {
+  padding: var(--gap-section) 1.5rem;
+  background: var(--charcoal);
+  color: var(--parchment);
+}
+
+.reviews__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---------- Responsive (agregar dentro o junto al @media (max-width: 700px) existente) ---------- */
+@media (max-width: 700px) {
+  .reviews__head {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .reviews__source {
+    justify-content: center;
+  }
+
+  .reviews__cta {
+    text-align: center;
+  }
+}
