@@ -179,6 +179,68 @@ a {
 }
 
 /* =========================================================
+   UBICACIÓN
+   ========================================================= */
+.location {
+  padding: var(--gap-section) 1.5rem;
+  background: var(--parchment);
+}
+
+.location__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: var(--gap-inner);
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.location__text,
+.location__map {
+  flex: 1 1 20rem;
+  min-width: 0;
+}
+
+.location__text h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 0.75rem;
+  color: var(--flame-dark);
+}
+
+.hours {
+  margin: 1.25rem 0 0;
+}
+
+.hours__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0; 
+  border-bottom: 1px solid var(--parchment-dim);
+  max-width: 22rem;
+}
+
+.hours__row dt {
+  font-weight: 700;
+  font-size: 1.15rem;   
+}
+
+.hours__row dd {
+  margin: 0;
+  color: var(--charcoal-soft);
+  font-size: 1.15rem;   
+}
+.location__map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 18rem;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+/* =========================================================
    HERO
    ========================================================= */
 .hero {
@@ -203,6 +265,31 @@ a {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* =========================================================
+   CIERRE / CALL TO ACTION
+   ========================================================= */
+.cta {
+  background: var(--field);
+  color: var(--parchment);
+  padding: var(--gap-section) 1.5rem;
+}
+
+.cta__inner {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta__line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 2rem;
+  text-wrap: balance;
+}
+
 
 /* =========================================================
    HISTORIA — filas alternadas de texto e imagen
@@ -264,92 +351,6 @@ a {
   line-height: 1.7;
   max-width: 34rem;
   margin: 0;
-}
-
-/* =========================================================
-   CIERRE / CALL TO ACTION
-   ========================================================= */
-.cta {
-  background: var(--field);
-  color: var(--parchment);
-  padding: var(--gap-section) 1.5rem;
-}
-
-.cta__inner {
-  max-width: 40rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.cta__line {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-  line-height: 1.15;
-  margin: 0 0 2rem;
-  text-wrap: balance;
-}
-
-/* =========================================================
-   UBICACIÓN
-   ========================================================= */
-.location {
-  padding: var(--gap-section) 1.5rem;
-  background: var(--parchment);
-}
-
-.location__inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: flex;
-  gap: var(--gap-inner);
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-.location__text,
-.location__map {
-  flex: 1 1 20rem;
-  min-width: 0;
-}
-
-.location__text h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  margin: 0 0 0.75rem;
-  color: var(--flame-dark);
-}
-
-.hours {
-  margin: 1.25rem 0 0;
-}
-
-.hours__row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.6rem 0; 
-  border-bottom: 1px solid var(--parchment-dim);
-  max-width: 22rem;
-}
-
-.hours__row dt {
-  font-weight: 700;
-  font-size: 1.15rem;   
-}
-
-.hours__row dd {
-  margin: 0;
-  color: var(--charcoal-soft);
-  font-size: 1.15rem;   
-}
-.location__map iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 18rem;
-  border: 0;
-  border-radius: 0.5rem;
 }
 
 /* =========================================================
