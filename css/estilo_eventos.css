@@ -1,0 +1,300 @@
+/* ========================================================
+   ESTILOS GENERALES Y DESPLAZAMIENTO SUAVE
+======================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px; /* Evita que el header fijo tape los títulos al anclar */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================================
+   SECCIÓN INICIO (HERO SECTION)
+======================================================== */
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0d10;
+  background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #e2d9c1;
+  padding: 100px 20px 60px;
+  text-align: center;
+}
+
+.menu-section {
+  padding: 80px 20px;
+  background-color: #121417;
+  color: #f1f1f1;
+}
+.container menu-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Capa oscura para garantizar legibilidad del texto */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 13, 16, 0.85) 0%,
+    rgba(11, 13, 16, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #cfd4dc;
+  margin: 0 auto 35px;
+  max-width: 680px;
+}
+
+/* Botones de llamada a la acción */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #ff9800;
+  color: #121417;
+  border: 2px solid #ff9800;
+}
+
+.btn-primary:hover {
+  background-color: #e68900;
+  border-color: #e68900;
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.35);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ficha de puntos destacados */
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.highlight-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.highlight-item strong {
+  display: block;
+  color: #ff9800;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.highlight-item span {
+  font-size: 0.85rem;
+  color: #9aa1ac;
+}
+
+/* ========================================================
+   SECCIÓN DE EVENTOS
+======================================================== */
+.events-section {
+  padding: 80px 20px;
+  background-color: #121417;
+  color: #f1f1f1;
+}
+
+.events-section .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.events-section .section-title h2 {
+  font-size: 2.2rem;
+  color: #ff9800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.events-section .section-title h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff9800;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.events-section .section-title p {
+  color: #a0a6b1;
+  font-size: 1.05rem;
+}
+
+/* Grid y tarjetas de eventos */
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.event-card {
+  background: #1c2026;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #ff9800;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 152, 0, 0.4);
+}
+
+.event-tag {
+  align-self: flex-start;
+  background-color: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.event-card h3 {
+  font-size: 1.35rem;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.event-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #c4c9d4;
+  margin-bottom: 20px;
+}
+
+.event-time {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff9800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+}
+
+/* ========================================================
+   DISEÑO ADAPTABLE (RESPONSIVE)
+======================================================== */
+@media (max-width: 768px) {
+  /* Hero móvil */
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Eventos móvil */
+  .events-section {
+    padding: 50px 15px;
+  }
+
+  .events-section .section-title h2 {
+    font-size: 1.8rem;
+  }
+}
