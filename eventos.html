@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos | Primos Sport Bar &amp; Grill</title>
   <meta name="description"
-    content="Armá tu plan en Primos: deporte, música y comida para compartir en Santa Ana. Consultá la programación y contactanos para tu visita.">
+    content="Mirá los eventos de este mes en Primos Sport Bar &amp; Grill, Santa Ana. Consultá el calendario y contactanos.">
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/estilo_eventos.css">
 </head>
 
-<body class="events-page">
+<body>
 
   <!-- ===================== ENCABEZADO Y NAVEGACIÓN ===================== -->
   <header class="site-header">
@@ -31,45 +31,41 @@
           <li><a href="contactos.html">Contactos</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
   <main>
+    <!-- ===================== PORTADA DE EVENTOS ===================== -->
+    <section class="events-hero" aria-labelledby="eventos-titulo">
+      <div class="events-hero__content">
+        <p class="events-hero__eyebrow">Santa Ana, El Salvador · Restaurant Sport Bar &amp; Grill</p>
+        <h1 id="eventos-titulo" class="events-hero__title">
+          Mirá los eventos que tenemos <span class="events-hero__accent">este mes</span>.
+        </h1>
+        <p class="events-hero__text">Consultá el calendario y armá tu visita a Primos.</p>
+        <a href="contactos.html" class="btn btn--primary">Reserva tu mesa</a>
+      </div>
+    </section>
 
-    <!-- ===================== SECCIÓN EVENTOS ===================== -->
-    <section id="eventos" class="events-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Próximos Eventos</h2>
-          <p>Transmisiones deportivas en vivo y veladas especiales.</p>
-        </div>
+    <!-- ===================== CALENDARIO ===================== -->
+    <section id="calendario" class="events-calendar" aria-labelledby="calendario-titulo">
+      <div class="events-calendar__inner">
+        <h2 id="calendario-titulo" class="events-calendar__title">Calendario de eventos</h2>
 
-        <div class="events-list">
-          <article class="event-card">
-            <span class="event-tag">Deportes en Vivo</span>
-            <h3>Partidos en Pantalla Gigante</h3>
-            <p>Disfruta de las mejores ligas de fútbol nacional e internacional con promociones en bebidas y cubetazos.
-            </p>
-            <span class="event-time">Todos los fines de semana</span>
-          </article>
+        <div class="events-calendar__frame">
+          <iframe class="events-calendar__month"
+            title="Calendario mensual de eventos de Primos Sport Bar &amp; Grill"
+            src="https://calendar.google.com/calendar/embed?src=f7c6693de1e029065d113ec6186fd1ceced6dcf48c4e4f0e9506ce565894ec8b%40group.calendar.google.com&amp;ctz=America%2FEl_Salvador&amp;hl=es&amp;mode=MONTH&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0"
+            loading="lazy"></iframe>
 
-          <article class="event-card">
-            <span class="event-tag">Música &amp; Show</span>
-            <h3>Noches de Música en Vivo</h3>
-            <p>El mejor ambiente musical con artistas invitados y acústicos para acompañar tus cortes a la parrilla.</p>
-            <span class="event-time">Viernes y Sábados | 7:30 PM</span>
-          </article>
-
-          <article class="event-card">
-            <span class="event-tag">Promociones</span>
-            <h3>After Office &amp; Wings</h3>
-            <p>Descuentos especiales en alitas y tragos seleccionados para compartir entre amigos y compañeros.</p>
-            <span class="event-time">Miércoles a Viernes | 4:00 PM a 7:00 PM</span>
-          </article>
+          <iframe class="events-calendar__agenda"
+            title="Agenda de eventos de Primos Sport Bar &amp; Grill"
+            src="https://calendar.google.com/calendar/embed?src=f7c6693de1e029065d113ec6186fd1ceced6dcf48c4e4f0e9506ce565894ec8b%40group.calendar.google.com&amp;ctz=America%2FEl_Salvador&amp;hl=es&amp;mode=AGENDA&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0"
+            loading="lazy"></iframe>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
