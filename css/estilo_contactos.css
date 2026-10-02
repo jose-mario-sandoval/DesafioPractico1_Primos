@@ -7,10 +7,6 @@
   text-align: center; 
 }
 
-.section-title--light {
-  color: var(--parchment);
-}
-
 /* ---------- Síguenos y contáctanos ---------- */
 .contact {
   padding: var(--gap-section) 1.5rem;
@@ -93,31 +89,4 @@
   margin-top: var(--gap-inner);
   text-align: center;
 }
-/* ---------- Deja tu reseña (Google) ---------- */
-.reviews {
-  padding: var(--gap-section) 1.5rem;
-  background: var(--charcoal);
-  color: var(--parchment);
-}
 
-.reviews__inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* ---------- Responsive (agregar dentro o junto al @media (max-width: 700px) existente) ---------- */
-@media (max-width: 700px) {
-  .reviews__head {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-  }
-
-  .reviews__source {
-    justify-content: center;
-  }
-
-  .reviews__cta {
-    text-align: center;
-  }
-}
