@@ -441,3 +441,16 @@ a {
     height: 24rem;
   }
 }
+
+/* Encabezado compartido: el logo y la navegación caben en teléfonos. */
+@media (max-width: 700px) {
+  .logo-slot { min-width: 0; }
+  .logo-slot__img { height: 3.5rem; }
+  .logo-slot__wordmark { font-size: 1.75rem; text-align: left; }
+  .logo-slot__tag { font-size: .7rem; line-height: 1.4; }
+  .main-nav { width: 100%; }
+  .main-nav ul { gap: 1rem; }
+  .main-nav a { font-size: .85rem; }
+}
+/* Las anclas de Inicio quedan visibles debajo del encabezado. */
+#ubicacion-titulo { scroll-margin-top: 180px; }
