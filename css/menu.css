@@ -1,16 +1,6 @@
-/* MENÚ: Flexbox, modelo de caja, selectores y media queries.
-   clamp(), calc(), object-fit y figure aparecen en el material de clase.
-   Los colores de esta hoja se escriben directamente, sin variables propias.
-   scroll-margin-top evita que el encabezado fijo tape los títulos al usar anclas;
-   se conserva como ajuste de navegación. */
 .menu-page {
   background: #f1ebdb;
 }
-
-
-
-
-
 
 .skip-link {
   position: absolute;

@@ -13,7 +13,7 @@
     ),
     url('../img/Logo_con_fondo.jpg');
   background-size: cover;
-  background-position: center right;
+  background-position: relative;
   background-repeat: no-repeat;
 }
 
