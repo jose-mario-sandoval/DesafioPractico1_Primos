@@ -120,7 +120,7 @@
 
 .category-nav {
   position: sticky;
-  top: 6rem;  
+  top: 6.8rem;  
   z-index: 10;
   background: #f1ebdb;
   border-bottom: 1px solid #d5cbb8;
@@ -767,20 +767,7 @@
 }
 
 @media (max-width: 700px) {
-
-.menu-page .logo-slot__img {
-    height: 48px;
-  }
-
-.menu-page .logo-slot__tag {
-    font-size: 9px;
-  }
-
-.menu-page .main-nav ul {
-    gap: 24px;
-  }
-
-.menu-hero {
+  .menu-hero {
     min-height: 440px;
     background-position: 66% 52%;
   }
@@ -808,7 +795,7 @@
   }
 
   .category-nav {
-    top: 3.5rem; 
+    position: static;
   }
 
   .category-nav__inner {
@@ -979,8 +966,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}

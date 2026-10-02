@@ -43,6 +43,13 @@ img {
   display: block;
 }
 
+.story__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
 a {
   color: inherit;
 }
@@ -299,7 +306,7 @@ a {
   padding: var(--gap-section) 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: var(--gap-inner);
 }
 
 .story__title {
@@ -324,25 +331,6 @@ a {
 .story__text {
   flex: 1 1 0;
   min-width: 0;
-}
-
-.story__photo-slot {
-  aspect-ratio: 4 / 3;
-  border-radius: 0.5rem;
-  border: 2px dashed var(--field);
-  background: linear-gradient(135deg, var(--parchment-dim), var(--parchment));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.story__photo-slot span {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--field);
-  letter-spacing: 0.02em;
 }
 
 .story__text p {
