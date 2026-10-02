@@ -47,7 +47,6 @@
   background-size: cover;
 }
 
-/* Pseudoelemento colocado dentro del padre con position: relative. */
 .menu-hero::before {
   content: '';
   position: absolute;
@@ -95,20 +94,16 @@
   padding: 15px 23px;
   border: 1px solid #b54132;
   color: #fff7e8;
-  background: #9e2526;
+  background: #ff0000;
   text-decoration: none;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;
+  border-radius: 999px;
 }
 
 .menu-button:hover {
-  background: #741b1c;
-}
-
-.menu-button>span {
-  font-size: 20px;
-  line-height: 1;
+  background: var(--flame);
 }
 
 .menu-hero__stamp {
@@ -124,6 +119,9 @@
 }
 
 .category-nav {
+  position: sticky;
+  top: 6rem;  
+  z-index: 10;
   background: #f1ebdb;
   border-bottom: 1px solid #d5cbb8;
 }
@@ -140,7 +138,7 @@
 
 .category-nav__label {
   font-family: 'Anton', 'Arial Narrow', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   white-space: nowrap;
 }
 
@@ -158,7 +156,7 @@
   padding: 22px 0 19px;
   border-bottom: 3px solid transparent;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -241,7 +239,6 @@
   gap: 22px;
 }
 
-/* Separación entre las dos filas de tarjetas de entradas. */
 .featured-grid + .featured-grid {
   margin-top: 22px;
 }
@@ -417,7 +414,6 @@
   border: 1px solid #d5cbb8;
 }
 
-/* Los videos adicionales siempre están visibles: un div y un título. */
 .extra-video__title {
   padding: 18px 20px;
   margin-bottom: 0;
@@ -724,7 +720,6 @@
   margin-bottom: 25px;
 }
 
-/* Media queries: tarjetas, tablas y multimedia se adaptan sin perder contenido. */
 @media (max-width: 1000px) {
   .category-nav__label {
     display: none;
@@ -763,10 +758,6 @@
 
   .video-card--portrait figcaption {
     width: 100%;
-  }
-
-  .photo-story {
-    min-height: 330px;
   }
 
   .boquitas-section {
@@ -816,6 +807,10 @@
     display: none;
   }
 
+  .category-nav {
+    top: 3.5rem; 
+  }
+
   .category-nav__inner {
     padding: 0 20px;
   }
@@ -855,7 +850,6 @@
 
   .menu-section {
     padding-top: 40px;
-    scroll-margin-top: 180px;
   }
 
   .featured-grid {
