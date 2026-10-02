@@ -1,10 +1,3 @@
-/* =========================================================
-   PÁGINA DE CONTACTOS
-   Pegar ANTES del bloque "RESPONSIVE" de styles.css
-   (o al final, si prefieres; los @media de abajo ya van incluidos)
-   ========================================================= */
-
-/* ---------- Título de sección reutilizable (mismo estilo que los h2 de index) ---------- */
 .section-title {
   font-family: var(--font-display);
   font-weight: 400;
@@ -96,6 +89,10 @@
   margin-top: auto;
 }
 
+.contact__review {
+  margin-top: var(--gap-inner);
+  text-align: center;
+}
 /* ---------- Deja tu reseña (Google) ---------- */
 .reviews {
   padding: var(--gap-section) 1.5rem;
