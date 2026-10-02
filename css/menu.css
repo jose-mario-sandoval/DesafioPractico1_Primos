@@ -794,8 +794,13 @@
     display: none;
   }
 
+  .menu-page .site-header {
+  position: static;
+  } 
+
   .category-nav {
-    position: static;
+    position: sticky;
+    top: 0;
   }
 
   .category-nav__inner {
