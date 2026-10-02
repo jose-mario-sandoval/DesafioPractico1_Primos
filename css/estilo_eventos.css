@@ -31,16 +31,6 @@ html {
   text-align: center;
 }
 
-.menu-section {
-  padding: 80px 20px;
-  background-color: #121417;
-  color: #f1f1f1;
-}
-.container menu-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /* Capa oscura para garantizar legibilidad del texto */
 .hero-overlay {
